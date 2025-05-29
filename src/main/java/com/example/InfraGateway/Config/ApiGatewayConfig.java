@@ -17,6 +17,8 @@ public class ApiGatewayConfig {
                         .uri("lb://MicroServiceBike"))
                 .route("station_service", r -> r.path("/api/stations/**")
                         .uri("lb://MicroServiceStation"))
+                .route("notifications_service", r -> r.path("/api/notifications/**")
+                        .uri("lb://MicroServiceNotifications"))
                 .build();
 
     }
